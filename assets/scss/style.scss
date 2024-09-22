@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import "variable";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px; // reset element body
+    font-family: $font-main;
+}
+
+.header {
+    background-color: $color-bg-dark;
+    padding: 15px 16px;
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    &__left {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    &__button-sider {
+        background-color: transparent;
+        font-size: 24px;
+        color: #2275FC;
+        border: 0;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    &__search {
+        flex: 1;
+        padding: 10px 22px;
+        border: 1px solid $color-text-light;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        gap: 10px;
+
+        input {
+            background-color: transparent;
+            font-size: 14px;
+            flex: 1;
+            border: 0px;
+            outline: 0;
+        }
+
+        button {
+            background-color: transparent;
+            color: $color-text-light;
+            font-size: 20px;
+            border: 0px;
+            padding: 0px;
+            margin: 0px;
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    &__buttons {
+        ul {
+            // reset ul li
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+
+            display: flex;
+            align-items: center;
+            gap: 24px;
+
+            li {
+                span {
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #303B4C;
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 50%;
+                    font-size: 20px;
+                    color: #94a3b8;
+                }
+                
+            }
+        }
+    }
+
+    &__user {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    &__user-avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    } 
+
+    &__user-title {
+        display: flex;
+        flex-direction: column;
+
+            h3 {
+                margin: 0px;
+                color: $color-text-light;
+                font-size: 14px;
+                font-weight: 700;
+            }
+
+            span {
+                color: #8B8E95;
+                font-size: 12px;
+            }
+    }
+
+    &__setting {
+        background-color: transparent;
+        color: $color-text-light;
+        font-size: 24px;
+        border: 0px;
+        padding: 0px;
+        margin: 0px;
+
+    }
+}

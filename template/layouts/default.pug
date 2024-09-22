@@ -11,12 +11,52 @@ html(lang="en")
         link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer")
 
         //- css
-        link(rel="stylesheet" href="../../assets/css/style.css")
+        link(rel="stylesheet" href="assets/css/style.css")
 
         //- title
         block title
     body 
         //- header
+        header(class="header")
+            div(class="header__wrap")
+                div(class="header__left")
+                    //- menu sider
+                    button(class="header__button-sider")
+                        i(class="fa-solid fa-bars")
+
+                    //- search
+                    form(action="" class="header__search")
+                        input(type="text" placeholder="Search here..." class="")
+                        button(type="submit" class="")
+                            i(class="fa-solid fa-magnifying-glass")
+
+                div(class="header__right")
+                    //- buttons
+                    div(class="header__buttons")
+                        ul
+                            li 
+                                span
+                                    i(class="fa-regular fa-sun")
+                            li 
+                                span
+                                    i(class="fa-regular fa-bell")
+                            li 
+                                span
+                                    i(class="fa-regular fa-comment")
+                    
+                    //- user
+                    div(class="header__user")
+                        div(class="header__user-avatar")
+                            img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEp5IrJqdtZ8jFHUAbxj9RL7Ni-C6tXtuHvQ&s")
+                        div(class="header__user-title")
+                            h3 Giang Trường
+                            span Admin
+                    
+                    //- setting
+                    button(class="header__setting")
+                        i(class="fa-solid fa-gear")
+        //- end header
+
 
         
 
