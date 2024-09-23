@@ -25,6 +25,24 @@ body {
   justify-content: space-between;
   gap: 30px;
 }
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.header__logo-image {
+  width: 50px;
+  height: 50px;
+}
+.header__logo-image img {
+  width: 100%;
+}
+.header__logo-title {
+  color: #FDFDFD;
+  font-size: 36px;
+  font-weight: 700;
+}
 .header__button-sider {
   background-color: transparent;
   font-size: 24px;
@@ -32,6 +50,7 @@ body {
   border: 0;
   padding: 0px;
   margin: 0px;
+  cursor: pointer;
 }
 .header__search {
   flex: 1;
@@ -44,6 +63,7 @@ body {
 }
 .header__search input {
   background-color: transparent;
+  color: #94A3B8;
   font-size: 14px;
   flex: 1;
   border: 0px;
@@ -56,6 +76,7 @@ body {
   border: 0px;
   padding: 0px;
   margin: 0px;
+  cursor: pointer;
 }
 .header__right {
   display: flex;
@@ -81,11 +102,13 @@ body {
   border-radius: 50%;
   font-size: 20px;
   color: #94a3b8;
+  cursor: pointer;
 }
 .header__user {
   display: flex;
   align-items: center;
   gap: 12px;
+  cursor: pointer;
 }
 .header__user-avatar {
   width: 36px;
@@ -120,6 +143,7 @@ body {
   border: 0px;
   padding: 0px;
   margin: 0px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
