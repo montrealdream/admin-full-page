@@ -11,7 +11,9 @@
   <body> 
     <header class="header">
       <div class="header__wrap">
-        <div class="header__left">
+        <div class="header__left"><a class="header__logo" href="#">
+            <div class="header__logo-image"><img src="https://cdn-icons-png.flaticon.com/512/714/714032.png"></div>
+            <div class="header__logo-title">Eagle</div></a>
           <button class="header__button-sider"><i class="fa-solid fa-bars"></i></button>
           <form class="header__search" action="">
             <input type="text" placeholder="Search here...">
@@ -36,6 +38,32 @@
         </div>
       </div>
     </header>
-    <div class="main"> </div>
+    <div class="main"> 
+      <nav class="sider">
+        <div class="sider__wrap">
+          <div class="sider__menu">
+            <div class="sider__menu-title">MAIN HOME </div>
+            <ul>
+              <li> <a href="#"><i class="fa-brands fa-windows"></i>  Dashboard</a></li>
+            </ul>
+          </div>
+          <div class="sider__menu">
+            <div class="sider__menu-title">ALL PAGE </div>
+            <ul> 
+              <li><a class="true" href="#"><i class="fa-solid fa-cart-shopping"></i>  Product</a></li>
+              <li><a class="true" href="#"><i class="fa-solid fa-layer-group"></i>  Category</a></li>
+              <li><a class="true" href="#"><i class="fa-regular fa-user"></i>  User</a></li>
+              <li><a class="true" href="#"><i class="fa-solid fa-user-plus"></i>  Roles</a></li>
+            </ul>
+          </div>
+          <div class="sider__menu">
+            <div class="sider__menu-title">SETTING </div>
+            <ul> 
+              <li><a class="true" href="#"><i class="fa-solid fa-gear"></i>  Setting </a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
   </body>
 </html>

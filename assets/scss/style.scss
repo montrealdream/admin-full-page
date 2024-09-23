@@ -11,6 +11,7 @@ body {
     font-family: $font-main;
 }
 
+// header
 .header {
     background-color: $color-bg-dark;
     padding: 15px 16px;
@@ -24,17 +25,18 @@ body {
 
     &__left {
         width: 50%;
-        display: flex;
+        display: inline-flex;
         align-items: center;
         justify-content: space-between;
         gap: 30px;
     }
 
     &__logo {
-        display: flex;
+        display: inline-flex;
         align-items: center;
         gap: 10px;
         text-decoration: none;
+        width: 205px;
     }
 
     &__logo-image {
@@ -174,3 +176,93 @@ body {
         cursor: pointer;
     }
 }
+// end header
+
+// #bdcfd3
+
+// sider
+.sider {
+    background-color: $color-bg-dark;
+    border-top: 0.5px solid #f2f7fb;
+    width: 280px;
+    height: 670px; // fix tạm
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    &__menu {
+        margin-bottom: 20px;
+
+        ul {
+            // reset element ul
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            
+            // setting
+            display: flex;
+            flex-direction: column;
+
+            li {
+                padding: 14px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+
+                a {
+                    text-decoration: none;
+                    color: #FDFDFD;
+                    font-size: 14px;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                    
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    &:hover {
+                        color: #2275FC;
+                        transition: color 1s;
+
+                        i {
+                            color: #2275FC;
+                            transition: color 1s;
+                        }
+                    }
+                    
+                    i {
+                        color: #bdcfd3;
+                        font-size: 18px;
+                    }
+
+                    
+                }
+
+                &::after {
+                    content: "\f107";
+                    line-height: 1;
+                    font-weight: 900;
+                    font-family: "Font Awesome 6 Free";
+                    color: #bdcfd3;
+                }
+            }
+
+           
+        }
+    }
+
+    &__menu-title {
+        color: #bdcfd3;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        padding-left: 14px;
+    }
+}
+// end sider
