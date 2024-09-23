@@ -1,6 +1,25 @@
 extends layouts/default.pug
 
+//- Mixins
+include mixins/box-head
+
 //- Title
 block title 
     title Eagle
 
+//- Mai Title
+block main
+    //- box-head
+    -
+        var breadcrumbArray = 
+        [
+            "Dashboard",
+            "Sản phẩm",
+            "Danh sách sản phẩm"
+        ]
+        
+    +box-head-use-breadcrumb("DANH SÁCH SẢN PHẨM", breadcrumbArray)
+                     
+    //- products
+    div(class="products")
+        div(class="products_wrap")

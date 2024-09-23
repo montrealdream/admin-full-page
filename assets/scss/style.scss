@@ -9,6 +9,7 @@
 body {
     margin: 0px; // reset element body
     font-family: $font-main;
+    background-color: #0F172A;
 }
 
 // header
@@ -183,8 +184,8 @@ body {
 // sider
 .sider {
     background-color: $color-bg-dark;
-    border-top: 0.5px solid #f2f7fb;
-    width: 280px;
+    border-top: 0.5px solid #283548;
+    width: 18%;
     height: 670px; // fix tạm
 
     &__wrap {
@@ -239,8 +240,6 @@ body {
                         color: #bdcfd3;
                         font-size: 18px;
                     }
-
-                    
                 }
 
                 &::after {
@@ -266,3 +265,93 @@ body {
     }
 }
 // end sider
+
+// main
+.body {
+    display: flex;
+}
+
+.main {
+    width: 82%;
+    padding: 30px;
+}
+// end main
+
+// box-head
+.box-head {
+    margin-bottom: 25px;
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        color: $color-text-light;
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0px;
+    }
+}
+// end box-head
+
+// breadcrumb
+.breadcrumb {
+    &__wrap {
+        ul {
+            // reset ul 
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            li {
+                position: relative;
+
+                a {
+                    color: #FFFFFF;
+                    font-size: 12px;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: #2275FC;
+                        transition: color 1s;
+                    }
+                }
+
+                &::after {
+                    // setting icon
+                    content: "\f105";
+                    line-height: 1;
+                    font-weight: 900;
+                    font-family: "Font Awesome 6 Free";
+                    // end setting icon
+
+                    color: #FFFFFF;
+                    font-size: 12px;
+                    display: inline-flex;
+                    position: absolute;
+                    top: 6px;
+                    right: -20px;
+                }
+
+                &:last-child {
+                    a {
+                        color: $color-text-light;
+                    }
+
+                    &::after {
+                        display: none;
+                    }
+                }
+                
+            }
+
+        }
+    }
+}
+// end breadcrumb
