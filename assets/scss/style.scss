@@ -355,3 +355,69 @@ body {
     }
 }
 // end breadcrumb
+
+// table
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    // border: 1px solid #bdcfd3;
+
+    th, td {
+        padding: 14px; // xây table thì luôn có mới đẹp hihi
+        color: $color-text-light;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: capitalize;
+        text-align: start;
+    }
+
+    &__head {
+        background-color: #212D3F;
+        overflow: hidden;
+    }
+
+    &__body {
+        tr {
+            &:nth-child(2n) {
+                background-color: #212D3F;
+            }
+        }
+    }
+
+    &__title {
+        display: inline-flex;
+        align-items: center;
+        gap: 20px;
+
+        img {
+            width: 50px;
+            height: 60px;
+            object-fit: cover;
+        }
+
+        h3 {
+            margin: 0px;    // reset h3 html
+            font-size: 14px;
+        }
+    }
+}
+// end table
+
+// badge
+.badge {
+    padding: 2px 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+
+    &--active {
+        background-color: #2A4432;
+        color: #22C554;
+    }
+
+    &--inactive {
+        background-color: #432F25;
+        color: #ED401B;
+    }
+}
+// end badge

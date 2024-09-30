@@ -278,4 +278,53 @@ body {
   display: none;
 }
 
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.table th, .table td {
+  padding: 14px;
+  color: #94A3B8;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: capitalize;
+  text-align: start;
+}
+.table__head {
+  background-color: #212D3F;
+  overflow: hidden;
+}
+.table__body tr:nth-child(2n) {
+  background-color: #212D3F;
+}
+.table__title {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+}
+.table__title img {
+  width: 50px;
+  height: 60px;
+  object-fit: cover;
+}
+.table__title h3 {
+  margin: 0px;
+  font-size: 14px;
+}
+
+.badge {
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.badge--active {
+  background-color: #2A4432;
+  color: #22C554;
+}
+.badge--inactive {
+  background-color: #432F25;
+  color: #ED401B;
+}
+
 /*# sourceMappingURL=style.css.map */

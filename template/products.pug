@@ -14,12 +14,98 @@ block main
         var breadcrumbArray = 
         [
             "Dashboard",
-            "Product",
-            "Product List"
+            "Sản Phẩm",
+            "Danh Sách Sản Phẩm"
         ]
         
     +box-head-use-breadcrumb("DANH SÁCH SẢN PHẨM", breadcrumbArray)
-                     
-    //- products
-    div(class="products")
-        div(class="products_wrap")
+    //- end box-head 
+
+    -   
+        var sanPham = 
+        [
+            {
+                title: "Phía sau nghi can x",
+                category:"Đang Cập Nhật",
+                img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKdEUA91tfYGjoTgBW-vRTz6mynjBNgu-tMA&s",
+                price:"1,452.500",
+                status:"active",
+                stock: 50
+            },
+            {
+                title: "Phía sau nghi can x",
+                category:"Đang Cập Nhật",
+                img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKdEUA91tfYGjoTgBW-vRTz6mynjBNgu-tMA&s",
+                price:"1,452.500",
+                status:"active",
+                stock: 50
+            },
+            {
+                title: "Phía sau nghi can x",
+                category:"Đang Cập Nhật",
+                img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKdEUA91tfYGjoTgBW-vRTz6mynjBNgu-tMA&s",
+                price:"1,452.500",
+                status:"active",
+                stock: 50
+            },
+
+            {
+                title: "Bí mật của naoke",
+                category:"Đang Cập Nhật",
+                img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZlv9AxXdlrzKkbCJxBFiJJdOE7UcwevFAuw&s",
+                price:"666.99",
+                status:"inactive",
+                stock: 0
+            }
+        ]
+    
+    //- card
+    div(class="card")
+        div(class="card__head")
+            div(class="filter")
+                <i class="fa-solid fa-sliders"></i>
+                
+        div(class="card__body")
+            //- table
+            table(class="table") 
+                thead(class="table__head")
+                    tr 
+                        th Sản Phẩm 
+                        th Danh Mục
+                        th Số Lượng
+                        th Giá
+                        th Trạng Thái
+                        th 
+                    
+                tbody(class="table__body")
+                    each item in sanPham 
+                        tr 
+                            td(class="table__title")
+                                img(
+                                    src=item.img 
+                                    alt=item.title
+                                )
+                                h3 #{item.title}
+                            
+                            td #{item.category}
+                            td 
+                                if(item.stock > 0)
+                                    span(class="badge badge--active") #{item.stock} In Stock
+                                else 
+                                    span(class="badge badge--inactive") Out of Stock
+                                    
+                            td #{item.price} VND
+                            
+                            td 
+                                if(item.status == "active")
+                                    span(class="badge badge--active") Hoạt động
+                                else 
+                                    span(class="badge badge--inactive") Dừng hoạt động
+                            td 
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                    //- end table
+        
+        div(class="card__footer")
+
+    //- end card 
+
