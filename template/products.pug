@@ -3,6 +3,7 @@ extends layouts/default.pug
 //- Mixins
 include mixins/box-head
 include mixins/pagination
+include mixins/form
 
 //- Title
 block title 
@@ -63,12 +64,35 @@ block main
     //- card
     div(class="card")
         div(class="card__head")
+            div(class="card__head-wrap")
+                //- left    
+                div(class="card__head-left")
+                    //- filter
+                    div(class="filter")
+                        //- icon filter
+                        div(class="filter__icon")
+                            <i class="fa-solid fa-sliders"></i>
+                    //- form search
+                    +form-search
+                //- right
+                div(class="card__head-right")
+                    //- add product
+                    div(class="button button__outline")
+                        <i class="fa-solid fa-plus"></i>
+                        |   THÊM MỚI
+               
 
         div(class="card__body")
             //- table
             table(class="table") 
                 thead(class="table__head")
                     tr 
+                        td 
+                            input(
+                                type = "checkbox"
+                                name=""
+                                class="checkbox"
+                            )
                         th Sản Phẩm 
                         th Danh Mục
                         th Số Lượng
@@ -79,6 +103,12 @@ block main
                 tbody(class="table__body")
                     each item in sanPham 
                         tr 
+                            td 
+                                input(
+                                    type = "checkbox"
+                                    name=""
+                                    class="checkbox"
+                                )
                             td(class="table__title")
                                 img(
                                     src=item.img 

@@ -423,6 +423,7 @@ body {
     border-radius: 8px;
     font-size: 12px;
     font-weight: 500;
+    cursor: pointer;
 
     &--active {
         background-color: #2A4432;
@@ -442,6 +443,25 @@ body {
     padding: 24px;
     border-radius: 12px;
 
+    &__head {
+        padding-bottom: 30px;
+    }
+
+    &__head-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    &__head-left {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        width: 500px;
+    }
+
     &__footer {
         padding-top: 30px;
         display: flex;
@@ -449,7 +469,6 @@ body {
     }
 }
 // end card
-
 
 // pagination
 .pagination {
@@ -487,3 +506,111 @@ body {
     }
 }
 // end pagination
+
+// filter
+.filter {
+    &__icon {
+        color: $color-text-light;
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+// end filter
+
+// button
+.button {
+    padding: 15px 22px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 12px;
+
+    &__fill {
+        background-color: #2275FC;
+        color: white;
+        
+        &:hover {
+            background-color: #2166D6;
+        }
+    }
+
+    &__outline {
+        background-color: white;
+        color: #2275FC;
+
+        &:hover {
+            background-color: #2275FC;
+            color: white;
+        }
+    }
+}
+// end button
+
+// check box
+.checkbox    {
+    appearance: none; // reset default checkbox
+    position: relative;
+    width: 1em;
+    height: 1em;
+    border: 1px solid gray;
+    /* Adjusts the position of the checkboxes on the text baseline */
+    vertical-align: -2px;
+    /* Set here so that Windows' High-Contrast Mode can override */
+    color: green;
+
+    &::before {
+        content: "✔";
+        position: absolute;
+        font-size: 1.2em;
+        right: -1px;
+        top: -0.3em;
+        visibility: hidden;
+        color: white;
+    }
+
+    &:checked::before {
+        /* Use `visibility` instead of `display` to avoid recalculating layout */
+        visibility: visible;
+    }
+
+    &:disabled {
+        border-color: black;
+        background: #ddd;
+        color: gray;
+      }
+  }
+// end check box
+
+// form
+.form {
+    &__search {
+        flex: 1;
+        // width: 500px;
+        // width: 50%;
+        padding: 10px 22px;
+        border: 1px solid $color-text-light;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        gap: 10px;
+
+        input {
+            background-color: transparent;
+            color: $color-text-light;
+            font-size: 14px;
+            flex: 1;
+            border: 0px;
+            outline: 0;
+        }
+
+        button {
+            background-color: transparent;
+            color: $color-text-light;
+            font-size: 20px;
+            border: 0px;
+            padding: 0px;
+            margin: 0px;
+            cursor: pointer;
+        }
+    }
+}
+// end form
