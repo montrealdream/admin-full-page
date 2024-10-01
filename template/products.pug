@@ -2,6 +2,7 @@ extends layouts/default.pug
 
 //- Mixins
 include mixins/box-head
+include mixins/pagination
 
 //- Title
 block title 
@@ -62,9 +63,7 @@ block main
     //- card
     div(class="card")
         div(class="card__head")
-            div(class="filter")
-                <i class="fa-solid fa-sliders"></i>
-                
+
         div(class="card__body")
             //- table
             table(class="table") 
@@ -106,6 +105,8 @@ block main
                     //- end table
         
         div(class="card__footer")
-
+            div(class="card__footer-left")
+            div(class="card__footer-right")
+                +pagination
     //- end card 
 
