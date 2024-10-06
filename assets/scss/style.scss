@@ -186,7 +186,8 @@ body {
     background-color: $color-bg-dark;
     border-top: 0.5px solid #283548;
     width: 18%;
-    height: 670px; // fix tạm
+    // height: 670px; // fix tạm
+    height: auto;
 
     &__wrap {
         display: flex;
@@ -623,18 +624,11 @@ body {
         gap: 24px;
     }
 
-    &__left {
+    &__left, &__right {
         width: calc((100% / 2) - 12px);
         display: flex;
         flex-direction: column;
         gap: 24px;
-    }
-
-    &__right {
-        width: calc((100% / 2) - 12px);
-        // display: flex;
-        // flex-direction: column;
-        // gap: 24px;
     }
 
     &__item {
@@ -650,6 +644,19 @@ body {
             border-radius: 12px;
             outline: 0;
             padding: 14px 22px;   
+        }
+    }
+
+    &__item-radio {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+
+        label {
+            color: $color-text-light;
+            font-size: 14px;
+            text-transform: capitalize;
         }
     }
 
