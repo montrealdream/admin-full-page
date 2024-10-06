@@ -491,6 +491,12 @@ body {
   justify-content: flex-end;
   gap: 24px;
 }
+.form__normal {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 .form__left, .form__right {
   width: calc(50% - 12px);
   display: flex;
