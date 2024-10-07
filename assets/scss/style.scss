@@ -396,6 +396,7 @@ body {
     &__title {
         display: inline-flex;
         align-items: center;
+        cursor: pointer;
         gap: 20px;
 
         img {
@@ -414,6 +415,17 @@ body {
                 cursor: pointer;
             }
         }
+    }
+
+    &__tile-sub span {
+        color: #8B8E95;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: none;
+    }
+
+    &__email {
+        text-transform: lowercase;
     }
 }
 // end table

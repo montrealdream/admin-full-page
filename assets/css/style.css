@@ -308,6 +308,7 @@ body {
 .table__title {
   display: inline-flex;
   align-items: center;
+  cursor: pointer;
   gap: 20px;
 }
 .table__title img {
@@ -323,6 +324,15 @@ body {
   color: #2275FC;
   transition: 0.5s color;
   cursor: pointer;
+}
+.table__tile-sub span {
+  color: #8B8E95;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: none;
+}
+.table__email {
+  text-transform: lowercase;
 }
 
 .badge {
