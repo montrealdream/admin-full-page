@@ -591,4 +591,63 @@ body {
   text-transform: none;
 }
 
+.table-permission {
+  border-collapse: collapse;
+  width: 100%;
+}
+.table-permission th, .table-permission td {
+  color: #94A3B8;
+  font-weight: 400;
+  text-align: center;
+  padding: 14px;
+}
+.table-permission th:first-child, .table-permission td:first-child {
+  text-align: left;
+}
+.table-permission td[colspan="5"] {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+}
+.table-permission__head {
+  color: #94A3B8;
+  font-size: 16px;
+  font-weight: 500;
+}
+.table-permission__body tr:nth-child(2n) {
+  background-color: #212D3F;
+}
+
+.radio-tick {
+  appearance: none;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  /* Adjusts the position of the checkboxes on the text baseline */
+  vertical-align: -2px;
+  /* Set here so that Windows' High-Contrast Mode can override */
+  color: green;
+  cursor: pointer;
+}
+.radio-tick::before {
+  content: "✔";
+  position: absolute;
+  font-size: 1.2em;
+  right: -1px;
+  top: -0.3em;
+  visibility: hidden;
+  color: white;
+}
+.radio-tick:checked::before {
+  /* Use `visibility` instead of `display` to avoid recalculating layout */
+  visibility: visible;
+}
+.radio-tick:disabled {
+  border-color: black;
+  background: #ddd;
+  color: gray;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -362,7 +362,7 @@ body {
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
-
+    
     tr {
         border-bottom: 1px solid #ffffff24;
     }
@@ -742,3 +742,80 @@ body {
     }
 }
 // end label
+
+
+// table permission
+.table-permission {
+    border-collapse: collapse;
+    width: 100%;
+
+    th, td {
+        color: $color-text-light;
+        font-weight: 400;
+        text-align: center;
+        padding: 14px;
+
+        &:first-child {
+            text-align: left;
+        }
+    }
+
+    td[colspan="5"] {
+        color: white;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    &__head {
+        color: $color-text-light;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &__body {
+        tr {
+            &:nth-child(2n) {
+                background-color: #212D3F;
+            }
+        }
+    }
+}
+// end table permission 
+
+
+// radio tick
+.radio-tick {
+    appearance: none; // reset default checkbox
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    /* Adjusts the position of the checkboxes on the text baseline */
+    vertical-align: -2px;
+    /* Set here so that Windows' High-Contrast Mode can override */
+    color: green;
+    cursor: pointer;
+    
+    &::before {
+        content: "✔";
+        position: absolute;
+        font-size: 1.2em;
+        right: -1px;
+        top: -0.3em;
+        visibility: hidden;
+        color: white;
+    }
+
+    &:checked::before {
+        /* Use `visibility` instead of `display` to avoid recalculating layout */
+        visibility: visible;
+    }
+
+    &:disabled {
+        border-color: black;
+        background: #ddd;
+        color: gray;
+      }
+}
+// end radio tick

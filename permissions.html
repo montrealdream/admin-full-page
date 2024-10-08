@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn-icons-png.flaticon.com/512/714/714032.png" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Phân Quyền</title>
+  </head>
+  <body> 
+    <header class="header">
+      <div class="header__wrap">
+        <div class="header__left"><a class="header__logo" href="#">
+            <div class="header__logo-image"><img src="https://cdn-icons-png.flaticon.com/512/714/714032.png"></div>
+            <div class="header__logo-title">Eagle</div></a>
+          <button class="header__button-sider"><i class="fa-solid fa-bars"></i></button>
+          <form class="header__search" action="">
+            <input type="text" placeholder="Search here...">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+        </div>
+        <div class="header__right">
+          <div class="header__buttons">
+            <ul>
+              <li> <span><i class="fa-regular fa-sun"></i></span></li>
+              <li> <span><i class="fa-regular fa-bell"></i></span></li>
+              <li> <span><i class="fa-regular fa-comment"></i></span></li>
+            </ul>
+          </div>
+          <div class="header__user">
+            <div class="header__user-avatar"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEp5IrJqdtZ8jFHUAbxj9RL7Ni-C6tXtuHvQ&amp;s"></div>
+            <div class="header__user-title">
+              <h3>Giang Trường</h3><span>Admin</span>
+            </div>
+          </div>
+          <button class="header__setting"><i class="fa-solid fa-gear"></i></button>
+        </div>
+      </div>
+    </header>
+    <div class="body"> 
+      <nav class="sider">
+        <div class="sider__wrap">
+          <div class="sider__menu">
+            <div class="sider__menu-title">MAIN HOME </div>
+            <ul>
+              <li> <a href="#"><i class="fa-brands fa-windows"></i>  Dashboard</a></li>
+            </ul>
+          </div>
+          <div class="sider__menu">
+            <div class="sider__menu-title">ALL PAGE </div>
+            <ul> 
+              <li><a class="true" href="#"><i class="fa-solid fa-cart-shopping"></i>  Sản Phẩm</a></li>
+              <li><a class="true" href="#"><i class="fa-solid fa-layer-group"></i>  Danh Mục</a></li>
+              <li><a class="true" href="#"><i class="fa-regular fa-user"></i>  Tài khoản</a></li>
+              <li><a class="true" href="#"><i class="fa-solid fa-user-plus"></i>  Nhóm Quyền</a></li>
+            </ul>
+          </div>
+          <div class="sider__menu">
+            <div class="sider__menu-title">SETTING </div>
+            <ul> 
+              <li><a class="true" href="#"><i class="fa-solid fa-gear"></i>  Cài đặt </a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="main">
+        <div class="box-head">
+          <div class="box-head__wrap">
+            <div class="box-head__left">
+              <h1 class="box-head__title">PHÂN QUYỀN</h1>
+            </div>
+            <div class="box-head__right">
+              <div class="breadcrumb">
+                <div class="breadcrumb__wrap">
+                  <ul> 
+                    <li> <a href="#">Dashboard </a></li>
+                    <li> <a href="#">Nhóm Quyền </a></li>
+                    <li> <a href="#">Phân Quyền </a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__body">
+            <div class="card__head">
+              <div class="card__head-wrap">
+                <div class="card__head-left">
+                  <form class="form form__search" action="#">
+                    <input type="text" placeholder="Search here..."/>
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                  </form>
+                </div>
+                <div class="card__head-right">
+                  <div class="button button__outline">  Cập nhật</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card__body">
+            <table class="table-permission">
+              <thead class="table-permission__head">
+                <tr> 
+                  <th>Tính năng </th>
+                  <th> Quản trị viên</th>
+                  <th> Quản lý danh mục</th>
+                  <th> Quản lý sản phẩm</th>
+                  <th> Nhân viên</th>
+                </tr>
+              </thead>
+              <tbody class="table-permission__body">
+                <tr>
+                  <td colspan="5"> Sản phẩm</td>
+                </tr>
+                <tr> 
+                  <td> Xem </td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                </tr>
+                <tr> 
+                  <td> Thêm</td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                </tr>
+                <tr> 
+                  <td> Sửa</td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                </tr>
+                <tr> 
+                  <td> Xóa</td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="5"> Danh mục</td>
+                </tr>
+                <tr> 
+                  <td> Xem </td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                </tr>
+                <tr> 
+                  <td> Thêm</td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                </tr>
+                <tr> 
+                  <td> Sửa</td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                </tr>
+                <tr> 
+                  <td> Xóa</td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                  <td> 
+                    <input class="radio-tick" type="radio">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
