@@ -361,6 +361,7 @@ body {
 }
 .card__head-wrap {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 30px;
@@ -408,10 +409,36 @@ body {
   border: 1px solid #283548;
 }
 
-.filter__icon {
-  color: #94A3B8;
-  font-size: 18px;
+.filter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.filter__title {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.filter__list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.filter__list-item {
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-size: 14px;
   font-weight: 500;
+  background-color: white;
+  color: #2166D6;
+  cursor: pointer;
+}
+.filter__list-item:hover {
+  background-color: #2275FC;
+  color: white;
+  transition: 0.8s background-color;
 }
 
 .button {
@@ -420,6 +447,7 @@ body {
   font-weight: 700;
   border: 0px;
   border-radius: 12px;
+  cursor: pointer;
 }
 .button__fill {
   background-color: #2275FC;

@@ -462,6 +462,7 @@ body {
 
     &__head-wrap {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
         gap: 30px;
@@ -522,10 +523,43 @@ body {
 
 // filter
 .filter {
-    &__icon {
-        color: $color-text-light;
-        font-size: 18px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &__title {
+        color: white;
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: capitalize;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 10px;     
+
+        span {
+            
+        }
+        
+    }
+
+    &__list-item {
+        padding: 10px 12px;
+        border-radius: 12px;
+        font-size: 14px;
         font-weight: 500;
+        background-color: white;
+        color: #2166D6;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #2275FC;
+            color: white;
+            transition: 0.8s background-color;
+        }
     }
 }
 // end filter
@@ -537,6 +571,7 @@ body {
     font-weight: 700;
     border: 0px;
     border-radius: 12px;
+    cursor: pointer;
 
     &__fill {
         background-color: #2275FC;
