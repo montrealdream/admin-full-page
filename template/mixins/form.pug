@@ -18,4 +18,10 @@ mixin form-search(keyword)
             i(class="fa-solid fa-magnifying-glass")
 
 
-//- mixin form-create
+mixin form-change-status
+    form(
+        action="#"
+        class = "hidden"
+        method = "POST"
+        form-change-status
+    )

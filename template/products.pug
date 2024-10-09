@@ -29,6 +29,7 @@ block main
         var sanPham = 
         [
             {
+                id: "65e9ad24841aed5173b59dd3",
                 title: "Phía sau nghi can x",
                 category:"Đang Cập Nhật",
                 img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKdEUA91tfYGjoTgBW-vRTz6mynjBNgu-tMA&s",
@@ -37,6 +38,7 @@ block main
                 stock: 50
             },
             {
+                id: "65e9ad24841aed5173b59dd4",
                 title: "Phía sau nghi can x",
                 category:"Đang Cập Nhật",
                 img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKdEUA91tfYGjoTgBW-vRTz6mynjBNgu-tMA&s",
@@ -45,6 +47,7 @@ block main
                 stock: 50
             },
             {
+                id: "65e9ad24841aed5173b59dd5",
                 title: "Phía sau nghi can x",
                 category:"Đang Cập Nhật",
                 img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKdEUA91tfYGjoTgBW-vRTz6mynjBNgu-tMA&s",
@@ -53,6 +56,7 @@ block main
                 stock: 50
             },
             {
+                id: "65e9ad24841aed5173b59dd6",
                 title: "Bí mật của naoke",
                 category:"Đang Cập Nhật",
                 img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZlv9AxXdlrzKkbCJxBFiJJdOE7UcwevFAuw&s",
@@ -61,6 +65,7 @@ block main
                 stock: 0
             },
             {
+                id: "65e9ad24841aed5173b59dda",
                 title: "HBR ON BUSINESS MODEL INNOVATION - Đổi Mới Mô Hình Kinh Doanh",
                 category:"Đang Cập Nhật",
                 img:"https://bizweb.dktcdn.net/thumb/large/100/197/269/products/83eab7a387b88b9209f41000e6735c02.jpg?v=1703572315407",
@@ -165,12 +170,14 @@ block main
                                 if(item.status == "active")
                                     span(
                                         class="badge badge--active"
+                                        button-status-id = item.id
                                         button-status = "active"
                                     ) Hoạt động
                                     
                                 else 
                                     span(
                                         class="badge badge--inactive"
+                                        button-status-id = item.id
                                         button-status = "inactive"
                                     ) Dừng hoạt động
                             td 
@@ -181,7 +188,12 @@ block main
             div(class="card__footer-left")
             div(class="card__footer-right")
                 +pagination(paginationObject)
+
+        //- form đổi trạng thái item
+        +form-change-status 
+        
     //- end card 
+
 
 block script 
     script(src="js/script.js")

@@ -10,6 +10,10 @@ body {
   background-color: #0F172A;
 }
 
+.hidden {
+  display: none;
+}
+
 .header {
   background-color: #1E293A;
   padding: 15px 16px;

@@ -78,3 +78,31 @@ if(paginationBlock) {
     });
 }
 // HẾT PHÂN TRANG - End Pagination
+
+// THAY ĐỔI TRẠNG THÁI ITEM - Change Status Of Item
+const formChangeStatus = document.querySelector("[form-change-status]");
+if(formChangeStatus) {
+    // lấy danh sách nút nhấn
+    const listButtonStatusId = document.querySelectorAll("[button-status-id]");
+
+    listButtonStatusId.forEach(button => {
+        //  lắng nghe sự kiện
+        button.addEventListener("click", (evnet) => {
+            const id = button.getAttribute("button-status-id");
+            let status = button.getAttribute("button-status");
+
+            // đảo trạng thái của status
+            status = (status === "active" ? "inactive" : "active");
+
+            // url: ..../change-status/:id/:status
+            let action = formChangeStatus.action;
+            action = `${action}/${id}/${status}`; 
+
+            // submit form
+            formChangeStatus.action = action
+            formChangeStatus.submit();
+        });
+    })
+      
+}
+// END THAY ĐỔI TRẠNG THÁI ITEM - EndChange Status Of Item
