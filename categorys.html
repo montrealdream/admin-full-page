@@ -44,22 +44,53 @@
           <div class="sider__menu">
             <div class="sider__menu-title">MAIN HOME </div>
             <ul>
-              <li> <a href="#"><i class="fa-brands fa-windows"></i>  Dashboard</a></li>
+              <li sider__menu-item><a href="javascript:;"><i class="fa-brands fa-windows"></i>  Dashboard</a></li>
             </ul>
           </div>
           <div class="sider__menu">
             <div class="sider__menu-title">ALL PAGE </div>
             <ul> 
-              <li><a class="true" href="#"><i class="fa-solid fa-cart-shopping"></i>  Sản Phẩm</a></li>
-              <li><a class="true" href="#"><i class="fa-solid fa-layer-group"></i>  Danh Mục</a></li>
-              <li><a class="true" href="#"><i class="fa-regular fa-user"></i>  Tài khoản</a></li>
-              <li><a class="true" href="#"><i class="fa-solid fa-user-plus"></i>  Nhóm Quyền</a></li>
+              <li sider__menu-item><a href="javascript:;"><i class="fa-solid fa-cart-shopping"></i>  Sản Phẩm</a></li>
+              <div class="sider__menu-sub hidden">
+                <ul>
+                  <li> <a href="products.html">Danh sách sản phẩm</a></li>
+                  <li> <a href="product-add.html">Thêm sản phẩm</a></li>
+                </ul>
+              </div>
+              <li sider__menu-item><a class="true" href="#"><i class="fa-solid fa-layer-group"></i>  Danh Mục</a></li>
+              <div class="sider__menu-sub hidden">
+                <ul>
+                  <li> <a href="#">Danh sách danh mục</a></li>
+                  <li> <a href="#">Thêm danh mục</a></li>
+                </ul>
+              </div>
+              <li sider__menu-item><a class="true" href="#"><i class="fa-regular fa-user"></i>  Tài khoản</a></li>
+              <div class="sider__menu-sub hidden">
+                <ul>
+                  <li> <a href="#">Danh sách tài khoản</a></li>
+                  <li> <a href="#">Thêm tài khoản</a></li>
+                </ul>
+              </div>
+              <li sider__menu-item><a class="true" href="#"><i class="fa-solid fa-user-plus"></i>  Nhóm Quyền</a></li>
+              <div class="sider__menu-sub hidden">
+                <ul>
+                  <li> <a href="#">Danh sách nhóm quyền</a></li>
+                  <li> <a href="#">Thêm nhóm quyền</a></li>
+                  <li> <a href="#">Phân quyền</a></li>
+                </ul>
+              </div>
             </ul>
           </div>
           <div class="sider__menu">
             <div class="sider__menu-title">SETTING </div>
             <ul> 
-              <li><a class="true" href="#"><i class="fa-solid fa-gear"></i>  Cài đặt </a></li>
+              <li sider__menu-item><a class="true" href="#"><i class="fa-solid fa-gear"></i>  Cài đặt </a></li>
+              <div class="sider__menu-sub hidden">
+                <ul>
+                  <li> <a href="#">Cài đặt chung</a></li>
+                  <li> <a href="#">Cài đặt nâng cao</a></li>
+                </ul>
+              </div>
             </ul>
           </div>
         </div>
@@ -84,14 +115,16 @@
           </div>
         </div>
         <div class="card">
-          <div class="card__head">
+          <div class="card__head"> 
             <div class="card__head-wrap">
-              <div class="card__head-left">
-                <div class="filter">
-                  <div class="filter__icon"><i class="fa-solid fa-sliders"></i></div>
+              <div class="filter"><span class="filter__title">
+                   <i class="fa-solid fa-filter"></i>  Bộ lọc tìm kiếm</span>
+                <div class="filter__list"><span class="filter__item " button-filter-status="">Tất cả</span><span class="filter__item filter__item--active" button-filter-status="active">Hoạt động</span><span class="filter__item " button-filter-status="inactive">Dừng hoạt động</span><span class="filter__item" button-reset-all="button-reset-all"><i class="fa-solid fa-rotate-right"></i></span>
                 </div>
+              </div>
+              <div class="card__head-left">
                 <form class="form form__search" action="#" method="GET" form-search="form-search">
-                  <input type="text" placeholder="Tìm kiếm ở đây..."/>
+                  <input type="text" placeholder="Tìm kiếm ở đây..." value=""/>
                   <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
               </div>
@@ -168,10 +201,24 @@
           <div class="card__footer">
             <div class="card__footer-left"></div>
             <div class="card__footer-right">
+              <ul class="pagination" pagination-block="pagination-block">
+                <li> <a class="pagination__item pagination__item-icon" href="javascript:;" pagination-item="6"><i class="fa-solid fa-angle-left"></i></a></li>
+                <li> <a class="pagination__item pagination__item-icon
+                            
+                            " href="#" pagination-item="6">6</a></li>
+                <li> <a class="pagination__item pagination__item-icon
+                            pagination__item--active
+                            " href="#" pagination-item="7">7</a></li>
+                <li> <a class="pagination__item pagination__item-icon
+                            
+                            " href="#" pagination-item="8">8</a></li>
+                <li> <a class="pagination__item pagination__item-icon" href="javascript:;" pagination-item="8"><i class="fa-solid fa-angle-right"></i></a></li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>

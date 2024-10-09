@@ -12,6 +12,10 @@ body {
     background-color: #0F172A;
 }
 // base
+.show {
+    display: block;
+}
+
 .hidden {
     display: none;
 }
@@ -204,7 +208,7 @@ body {
     &__menu {
         margin-bottom: 20px;
 
-        ul {
+        & > ul {
             // reset element ul
             list-style: none;
             margin: 0;
@@ -214,7 +218,7 @@ body {
             display: flex;
             flex-direction: column;
 
-            li {
+            & > li {
                 padding: 14px;
                 display: flex;
                 justify-content: space-between;
@@ -258,6 +262,37 @@ body {
             }
 
            
+        }
+    }
+
+    &__menu-sub {
+        ul {
+            list-style: none;
+            li {
+                margin-bottom: 10px;
+                a {
+                    text-decoration: none;
+                    color: $color-text-light;
+                    font-size: 14px;
+                    position: relative;
+                    
+                    &:hover {
+                        color: #2275FC;
+                        transition: color 1s;
+                    }
+
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        top: 6px;
+                        left: -17px;
+                        width: 5px;
+                        height: 5px;
+                        border: 1px solid #cbd5e1;
+                        transform: rotate(45deg);
+                    }
+                } 
+            }
         }
     }
 
@@ -440,6 +475,45 @@ body {
 
     &__email {
         text-transform: lowercase;
+    }
+    
+    &__option-icon {
+        cursor: pointer;
+        position: relative;
+    }
+
+    &__option-tab {
+        padding: 8px 8px;
+        background-color: $color-input;
+        position: absolute;
+        right: 12px;
+        width: 135px;
+        border-radius: 10px 4px 10px 10px;
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            display: inline-flex;
+            flex-direction: column;
+            gap: 10px;
+
+            li {
+                padding: 6px;
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 14px;
+                    font-weight: 400;
+                    transform: none;
+                }
+
+                &:hover a {
+                    color: #2166D6;
+                    transition: color 1s;
+                }
+            }
+        }
     }
 }
 // end table

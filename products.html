@@ -44,22 +44,53 @@
           <div class="sider__menu">
             <div class="sider__menu-title">MAIN HOME </div>
             <ul>
-              <li> <a href="#"><i class="fa-brands fa-windows"></i>  Dashboard</a></li>
+              <li sider__menu-item><a href="javascript:;"><i class="fa-brands fa-windows"></i>  Dashboard</a></li>
             </ul>
           </div>
           <div class="sider__menu">
             <div class="sider__menu-title">ALL PAGE </div>
             <ul> 
-              <li><a class="true" href="#"><i class="fa-solid fa-cart-shopping"></i>  Sản Phẩm</a></li>
-              <li><a class="true" href="#"><i class="fa-solid fa-layer-group"></i>  Danh Mục</a></li>
-              <li><a class="true" href="#"><i class="fa-regular fa-user"></i>  Tài khoản</a></li>
-              <li><a class="true" href="#"><i class="fa-solid fa-user-plus"></i>  Nhóm Quyền</a></li>
+              <li sider__menu-item><a href="javascript:;"><i class="fa-solid fa-cart-shopping"></i>  Sản Phẩm</a></li>
+              <div class="sider__menu-sub hidden">
+                <ul>
+                  <li> <a href="products.html">Danh sách sản phẩm</a></li>
+                  <li> <a href="product-add.html">Thêm sản phẩm</a></li>
+                </ul>
+              </div>
+              <li sider__menu-item><a class="true" href="#"><i class="fa-solid fa-layer-group"></i>  Danh Mục</a></li>
+              <div class="sider__menu-sub hidden">
+                <ul>
+                  <li> <a href="#">Danh sách danh mục</a></li>
+                  <li> <a href="#">Thêm danh mục</a></li>
+                </ul>
+              </div>
+              <li sider__menu-item><a class="true" href="#"><i class="fa-regular fa-user"></i>  Tài khoản</a></li>
+              <div class="sider__menu-sub hidden">
+                <ul>
+                  <li> <a href="#">Danh sách tài khoản</a></li>
+                  <li> <a href="#">Thêm tài khoản</a></li>
+                </ul>
+              </div>
+              <li sider__menu-item><a class="true" href="#"><i class="fa-solid fa-user-plus"></i>  Nhóm Quyền</a></li>
+              <div class="sider__menu-sub hidden">
+                <ul>
+                  <li> <a href="#">Danh sách nhóm quyền</a></li>
+                  <li> <a href="#">Thêm nhóm quyền</a></li>
+                  <li> <a href="#">Phân quyền</a></li>
+                </ul>
+              </div>
             </ul>
           </div>
           <div class="sider__menu">
             <div class="sider__menu-title">SETTING </div>
             <ul> 
-              <li><a class="true" href="#"><i class="fa-solid fa-gear"></i>  Cài đặt </a></li>
+              <li sider__menu-item><a class="true" href="#"><i class="fa-solid fa-gear"></i>  Cài đặt </a></li>
+              <div class="sider__menu-sub hidden">
+                <ul>
+                  <li> <a href="#">Cài đặt chung</a></li>
+                  <li> <a href="#">Cài đặt nâng cao</a></li>
+                </ul>
+              </div>
             </ul>
           </div>
         </div>
@@ -133,7 +164,16 @@
                   <td> <span class="badge badge--active" button-status-id="65e9ad24841aed5173b59dd3" button-status="active">Hoạt động</span>
                   </td>
                   <td>
-                     <i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    <div class="table__option-icon"><i class="fa-solid fa-ellipsis-vertical"></i>
+                      <div class="table__option-tab hidden">
+                        <ul> 
+                          <li> <a href="#">Chỉnh Sửa</a></li>
+                          <li> <a href="#">Xem Chi Tiết</a></li>
+                          <li> <a href="javascript:;" button-delete-soft="65e9ad24841aed5173b59dd3">Xóa</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
                 </tr>
                 <tr> 
                   <td> 
@@ -149,7 +189,16 @@
                   <td> <span class="badge badge--active" button-status-id="65e9ad24841aed5173b59dd4" button-status="active">Hoạt động</span>
                   </td>
                   <td>
-                     <i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    <div class="table__option-icon"><i class="fa-solid fa-ellipsis-vertical"></i>
+                      <div class="table__option-tab hidden">
+                        <ul> 
+                          <li> <a href="#">Chỉnh Sửa</a></li>
+                          <li> <a href="#">Xem Chi Tiết</a></li>
+                          <li> <a href="javascript:;" button-delete-soft="65e9ad24841aed5173b59dd4">Xóa</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
                 </tr>
                 <tr> 
                   <td> 
@@ -165,7 +214,16 @@
                   <td> <span class="badge badge--active" button-status-id="65e9ad24841aed5173b59dd5" button-status="active">Hoạt động</span>
                   </td>
                   <td>
-                     <i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    <div class="table__option-icon"><i class="fa-solid fa-ellipsis-vertical"></i>
+                      <div class="table__option-tab hidden">
+                        <ul> 
+                          <li> <a href="#">Chỉnh Sửa</a></li>
+                          <li> <a href="#">Xem Chi Tiết</a></li>
+                          <li> <a href="javascript:;" button-delete-soft="65e9ad24841aed5173b59dd5">Xóa</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
                 </tr>
                 <tr> 
                   <td> 
@@ -181,7 +239,16 @@
                   <td> <span class="badge badge--inactive" button-status-id="65e9ad24841aed5173b59dd6" button-status="inactive">Dừng hoạt động</span>
                   </td>
                   <td>
-                     <i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    <div class="table__option-icon"><i class="fa-solid fa-ellipsis-vertical"></i>
+                      <div class="table__option-tab hidden">
+                        <ul> 
+                          <li> <a href="#">Chỉnh Sửa</a></li>
+                          <li> <a href="#">Xem Chi Tiết</a></li>
+                          <li> <a href="javascript:;" button-delete-soft="65e9ad24841aed5173b59dd6">Xóa</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
                 </tr>
                 <tr> 
                   <td> 
@@ -197,7 +264,16 @@
                   <td> <span class="badge badge--inactive" button-status-id="65e9ad24841aed5173b59dda" button-status="inactive">Dừng hoạt động</span>
                   </td>
                   <td>
-                     <i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    <div class="table__option-icon"><i class="fa-solid fa-ellipsis-vertical"></i>
+                      <div class="table__option-tab hidden">
+                        <ul> 
+                          <li> <a href="#">Chỉnh Sửa</a></li>
+                          <li> <a href="#">Xem Chi Tiết</a></li>
+                          <li> <a href="javascript:;" button-delete-soft="65e9ad24841aed5173b59dda">Xóa</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -221,6 +297,7 @@
             </div>
           </div>
           <form class="hidden" action="#" method="POST" form-change-status="form-change-status"></form>
+          <form class="hidden" action="#" method="POST" form-delete-soft="form-delete-soft"></form>
         </div>
       </div>
     </div>

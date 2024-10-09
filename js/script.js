@@ -1,3 +1,67 @@
+// ĐÓNG MỞ SIDER CON - Opent Close Sub-Sider
+const siderMenuItems = document.querySelectorAll("[sider__menu-item]");
+const SiderSubItems = document.querySelectorAll(".sider__menu-sub");
+if(siderMenuItems.length > 0) {
+    siderMenuItems.forEach((itemMenu, index) => {
+        // lắng nghe sự kiện khi nhấn vào sider cha
+        itemMenu.addEventListener("click", (event) => {
+
+            // đóng tất cả các sider con đã mở ra
+            SiderSubItems.forEach(item => {
+                // đóng các sider khác ngoại trừ sider được nhấn
+                if(item !== SiderSubItems[index - 1])
+                    item.classList.add("hidden");
+            });
+
+            // ----------- CÁCH 1 ----------- //
+            // // mở sider con của sider cha đã nhấn vào
+            // const isHidden = SiderSubItems[index - 1].getAttribute("class");
+
+            // // nếu đã có class hide thì lần này nhấn sẽ đóng sider lại
+            // if(isHidden.includes('hidden') === true )
+            //     SiderSubItems[index-1].classList.remove("hidden");
+            // else
+            //     SiderSubItems[index-1].classList.add("hidden");
+
+
+
+            // ----------- CÁCH 2 ----------- //
+            // const isHidden = SiderSubItems[index - 1].classList.contains("hidden");
+            // if(isHidden)
+            //     SiderSubItems[index-1].classList.remove("hidden");
+            // else
+            //     SiderSubItems[index-1].classList.add("hidden");
+            
+
+
+            // ----------- CÁCH 3 ----------- //
+            SiderSubItems[index - 1].classList.toggle("hidden");
+        });
+    });
+    // lưu ý vì sider con của dashboard không có nên mới cần phải -1
+    // cách làm này chưa tối ưu lắm
+}
+// HẾT ĐÓNG MỞ SIDER CON - End Opent Close Sub-Sider
+
+// ĐÓNG MỞ OPTION TABLE -  Open Close Option Table
+const optionTabs = document.querySelectorAll(".table__option-tab");
+const optionIcons  = document.querySelectorAll(".table__option-icon");
+
+if(optionIcons.length > 0 && optionTabs.length > 0) {
+    optionIcons.forEach((icon, iconIndex) => {
+        // lắng nghe sự kiện
+        icon.addEventListener("click", (event) => {
+            optionTabs.forEach((tab, tabIndex) => {
+                if(tabIndex !== iconIndex)
+                    tab.classList.add("hidden");
+            });
+
+            optionTabs[iconIndex].classList.toggle("hidden");
+        });
+    });
+}
+// HẾT ĐÓNG MỞ OPTION TABLE -  End Open Close Option Table
+
 // BỘ LỌC TRẠNG THÁI - Filter Button Status
 const buttonFilterStatus = document.querySelectorAll("[button-filter-status]");
 if(buttonFilterStatus) {
@@ -124,3 +188,24 @@ if(buttonResetAll) {
     });
 }
 // HẾT NÚT RESET TẤT CẢ BỘ LỌC VÀ TÌM KIẾM - End Button Reset All
+
+// XÓA MỀM SẢN PHẨM - Delete Soft
+const listButtonDelete = document.querySelectorAll("[button-delete-soft]");
+const formDeleteSoft = document.querySelector("[form-delete-soft]");
+if(listButtonDelete.length > 0) {
+    listButtonDelete.forEach(button => {
+        // lắng nge sự kiện
+        button.addEventListener("click", (event) => {
+            const id = button.getAttribute("button-delete-soft");
+            console.log(id);
+            // .../delete-soft/id
+            let action = formDeleteSoft.action;
+            action = `${action}/${id}`;
+
+            // submit form
+            formDeleteSoft.action = action;
+            formDeleteSoft.submit();
+        });
+    });
+}
+// HẾT XÓA MỀM SẢN PHẨM - End Delete Soft

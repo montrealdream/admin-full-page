@@ -4,6 +4,7 @@ extends layouts/default.pug
 include mixins/box-head
 include mixins/pagination
 include mixins/form
+include mixins/filter
 
 //- Title
 block title 
@@ -48,20 +49,45 @@ block main
                 status:"inactive",
             }
         ]
-    
+        //- demo filter status
+    -   
+        var filterStatusArray = 
+        [
+            {
+                title: "Tất cả",
+                status: "",
+                class: "",
+            },
+            {
+                title: "Hoạt động",
+                status: "active",
+                class: "filter__item--active",
+            },
+            {
+                title: "Dừng hoạt động",
+                status: "inactive",
+                class: "",
+            }
+        ]
+
+    //- demo pagination
+    -   
+        var paginationObject = 
+        {
+            totalPage: 10,
+            currentPage: 7
+        }
+
     //- card
     div(class="card")
-        div(class="card__head")
+        div(class="card__head") 
             div(class="card__head-wrap")
+                //- filter
+                +filter-status(filterStatusArray)
                 //- left    
                 div(class="card__head-left")
-                    //- filter
-                    div(class="filter")
-                        //- icon filter
-                        div(class="filter__icon")
-                            <i class="fa-solid fa-sliders"></i>
                     //- form search
-                    +form-search
+                    +form-search("")
                 //- right
                 div(class="card__head-right")
                     //- add product
@@ -113,6 +139,10 @@ block main
         div(class="card__footer")
             div(class="card__footer-left")
             div(class="card__footer-right")
-                +pagination
+                +pagination(paginationObject)
     //- end card 
+
+
+block script 
+    script(src="js/script.js")
 

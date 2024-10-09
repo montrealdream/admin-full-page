@@ -10,6 +10,10 @@ body {
   background-color: #0F172A;
 }
 
+.show {
+  display: block;
+}
+
 .hidden {
   display: none;
 }
@@ -168,21 +172,21 @@ body {
 .sider__menu {
   margin-bottom: 20px;
 }
-.sider__menu ul {
+.sider__menu > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
 }
-.sider__menu ul li {
+.sider__menu > ul > li {
   padding: 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
 }
-.sider__menu ul li a {
+.sider__menu > ul > li a {
   text-decoration: none;
   color: #FDFDFD;
   font-size: 14px;
@@ -192,24 +196,50 @@ body {
   align-items: center;
   gap: 10px;
 }
-.sider__menu ul li a:hover {
+.sider__menu > ul > li a:hover {
   color: #2275FC;
   transition: color 1s;
 }
-.sider__menu ul li a:hover i {
+.sider__menu > ul > li a:hover i {
   color: #2275FC;
   transition: color 1s;
 }
-.sider__menu ul li a i {
+.sider__menu > ul > li a i {
   color: #bdcfd3;
   font-size: 18px;
 }
-.sider__menu ul li::after {
+.sider__menu > ul > li::after {
   content: "\f107";
   line-height: 1;
   font-weight: 900;
   font-family: "Font Awesome 6 Free";
   color: #bdcfd3;
+}
+.sider__menu-sub ul {
+  list-style: none;
+}
+.sider__menu-sub ul li {
+  margin-bottom: 10px;
+}
+.sider__menu-sub ul li a {
+  text-decoration: none;
+  color: #94A3B8;
+  font-size: 14px;
+  position: relative;
+}
+.sider__menu-sub ul li a:hover {
+  color: #2275FC;
+  transition: color 1s;
+}
+.sider__menu-sub ul li a::before {
+  position: absolute;
+  content: "";
+  top: 6px;
+  left: -17px;
+  width: 5px;
+  height: 5px;
+  border: 1px solid #cbd5e1;
+  transform: rotate(45deg);
 }
 .sider__menu-title {
   color: #bdcfd3;
@@ -342,6 +372,40 @@ body {
 }
 .table__email {
   text-transform: lowercase;
+}
+.table__option-icon {
+  cursor: pointer;
+  position: relative;
+}
+.table__option-tab {
+  padding: 8px 8px;
+  background-color: #324055;
+  position: absolute;
+  right: 12px;
+  width: 135px;
+  border-radius: 10px 4px 10px 10px;
+}
+.table__option-tab ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.table__option-tab ul li {
+  padding: 6px;
+}
+.table__option-tab ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  transform: none;
+}
+.table__option-tab ul li:hover a {
+  color: #2166D6;
+  transition: color 1s;
 }
 
 .badge {
