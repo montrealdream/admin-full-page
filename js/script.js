@@ -103,6 +103,5 @@ if(formChangeStatus) {
             formChangeStatus.submit();
         });
     })
-      
 }
 // END THAY ĐỔI TRẠNG THÁI ITEM - EndChange Status Of Item
