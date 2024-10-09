@@ -11,8 +11,11 @@ if(buttonFilterStatus) {
             const status = button.getAttribute("button-filter-status");
 
             // set ?query cho url
-            if(status)
+            if(status) {
                 url.searchParams.set("status", status);
+                url.searchParams.set("page", 1); // khi filter cái status sẽ set về đầu trang
+            }
+                
 
             else
                 url.searchParams.delete("status");
@@ -37,11 +40,14 @@ if(formSearch) {
         let tagInput = formSearch.querySelector("input");
 
         // set ?query cho url
-        if(tagInput.value)
+        if(tagInput.value) {
             url.searchParams.set("keyword", tagInput.value);
-
+            url.searchParams.set("page", 1); // khi tìm kiếm thì phải reset page về đầu trang
+        }
+        
         else
             url.searchParams.delete("keyword");
+            
         
         // chuyển hướng url
         window.location.href = url.href;
@@ -49,3 +55,26 @@ if(formSearch) {
 }
 // END FORM TÌM KIẾM - Hết Form Search
 
+// PHÂN TRANG - Pagination
+const paginationBlock = document.querySelector("[pagination-block]");
+if(paginationBlock) {
+    // lấy các nút pagination
+    paginationListItem = paginationBlock.querySelectorAll("[pagination-item]");
+
+    paginationListItem.forEach(item => {
+        // lắng nghe sự kiện
+        item.addEventListener("click", (event) => {
+            // lấy đường dẫn url - window location
+            let url = new URL(window.location.href);
+
+            let page = item.getAttribute("pagination-item");
+            console.log(page);
+            // set ?query
+            url.searchParams.set("page", page);
+
+            // chuyển hướng url
+            window.location.href = url.href;
+        });
+    });
+}
+// HẾT PHÂN TRANG - End Pagination

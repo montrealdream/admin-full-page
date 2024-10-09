@@ -24,6 +24,7 @@ block main
     +box-head-use-breadcrumb("DANH SÁCH SẢN PHẨM", breadcrumbArray)
     //- end box-head 
 
+    //- demo san pham
     -   
         var sanPham = 
         [
@@ -69,6 +70,7 @@ block main
             }
         ]
     
+    //- demo filter status
     -   
         var filterStatusArray = 
         [
@@ -89,9 +91,17 @@ block main
             }
         ]
 
+    //- demo pagination
+    -   
+        var paginationObject = 
+        {
+            totalPage: 10,
+            currentPage: 7
+        }
+    
     //- card
     div(class="card")
-        div(class="card__head")
+        div(class="card__head") 
             div(class="card__head-wrap")
                 //- filter
                 +filter-status(filterStatusArray)
@@ -170,7 +180,7 @@ block main
         div(class="card__footer")
             div(class="card__footer-left")
             div(class="card__footer-right")
-                +pagination
+                +pagination(paginationObject)
     //- end card 
 
 block script 
