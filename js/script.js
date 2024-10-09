@@ -105,3 +105,22 @@ if(formChangeStatus) {
     })
 }
 // END THAY ĐỔI TRẠNG THÁI ITEM - EndChange Status Of Item
+
+// NÚT RESET TẤT CẢ BỘ LỌC VÀ TÌM KIẾM - Button Reset All
+const buttonResetAll = document.querySelector("[button-reset-all]");
+if(buttonResetAll) {
+    // lắng nghe sự kiện
+    buttonResetAll.addEventListener("click", (event) => {
+        // lấy url
+        let url = new URL(window.location.href); // window location
+
+        // xóa hết các ?query
+        url.searchParams.delete("status");
+        url.searchParams.delete("key");
+        url.searchParams.delete("page");
+
+        // chuyển hướng url
+        window.location.href = url.href;
+    });
+}
+// HẾT NÚT RESET TẤT CẢ BỘ LỌC VÀ TÌM KIẾM - End Button Reset All
