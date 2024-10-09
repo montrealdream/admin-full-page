@@ -319,6 +319,11 @@ body {
 .table__title h3 {
   margin: 0px;
   font-size: 14px;
+  width: 300px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 .table__title h3:hover {
   color: #2275FC;
@@ -426,7 +431,7 @@ body {
   align-items: center;
   gap: 10px;
 }
-.filter__list-item {
+.filter__item {
   padding: 10px 12px;
   border-radius: 12px;
   font-size: 14px;
@@ -435,10 +440,10 @@ body {
   color: #2166D6;
   cursor: pointer;
 }
-.filter__list-item:hover {
+.filter__item:hover, .filter__item--active {
   background-color: #2275FC;
   color: white;
-  transition: 0.8s background-color;
+  transition: 1s background-color;
 }
 
 .button {
@@ -467,7 +472,7 @@ body {
   transition: 0.8s background-color;
 }
 
-.checkbox {
+.checkbox-tick {
   appearance: none;
   position: relative;
   width: 1em;
@@ -477,8 +482,9 @@ body {
   vertical-align: -2px;
   /* Set here so that Windows' High-Contrast Mode can override */
   color: green;
+  cursor: pointer;
 }
-.checkbox::before {
+.checkbox-tick::before {
   content: "✔";
   position: absolute;
   font-size: 1.2em;
@@ -487,11 +493,11 @@ body {
   visibility: hidden;
   color: white;
 }
-.checkbox:checked::before {
+.checkbox-tick:checked::before {
   /* Use `visibility` instead of `display` to avoid recalculating layout */
   visibility: visible;
 }
-.checkbox:disabled {
+.checkbox-tick:disabled {
   border-color: black;
   background: #ddd;
   color: gray;
@@ -676,6 +682,16 @@ body {
   border-color: black;
   background: #ddd;
   color: gray;
+}
+
+.sort-option__title {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.sort-option__title i {
+  margin-right: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

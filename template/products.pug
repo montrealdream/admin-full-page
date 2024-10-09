@@ -4,6 +4,7 @@ extends layouts/default.pug
 include mixins/box-head
 include mixins/pagination
 include mixins/form
+include mixins/filter
 
 //- Title
 block title 
@@ -50,7 +51,6 @@ block main
                 status:"active",
                 stock: 50
             },
-
             {
                 title: "Bí mật của naoke",
                 category:"Đang Cập Nhật",
@@ -58,28 +58,47 @@ block main
                 price:"666.99",
                 status:"inactive",
                 stock: 0
+            },
+            {
+                title: "HBR ON BUSINESS MODEL INNOVATION - Đổi Mới Mô Hình Kinh Doanh",
+                category:"Đang Cập Nhật",
+                img:"https://bizweb.dktcdn.net/thumb/large/100/197/269/products/83eab7a387b88b9209f41000e6735c02.jpg?v=1703572315407",
+                price:"666.99",
+                status:"inactive",
+                stock: 0
             }
         ]
     
+    -   
+        var filterStatusArray = 
+        [
+            {
+                title: "Tất cả",
+                status: "",
+                class: "",
+            },
+            {
+                title: "Hoạt động",
+                status: "active",
+                class: "filter__item--active",
+            },
+            {
+                title: "Dừng hoạt động",
+                status: "inactive",
+                class: "",
+            }
+        ]
+
     //- card
     div(class="card")
         div(class="card__head")
             div(class="card__head-wrap")
                 //- filter
-                div(class="filter")
-                    span(class="filter__title") 
-                        <i class="fa-solid fa-filter"></i>
-                        |   Bộ lọc tìm kiếm
-                    div(class="filter__list")
-                        span(class="filter__list-item") Tất cả
-                        span(class="filter__list-item") Hoạt động
-                        span(class="filter__list-item") Dừng hoạt động
-                        span(class="filter__list-item")
-                            <i class="fa-solid fa-rotate-right"></i>
+                +filter-status(filterStatusArray)
                 //- left    
                 div(class="card__head-left")
                     //- form search
-                    +form-search
+                    +form-search("")
                 //- right
                 div(class="card__head-right")
                     //- add product
@@ -97,7 +116,7 @@ block main
                             input(
                                 type = "checkbox"
                                 name=""
-                                class="checkbox"
+                                class="checkbox-tick"
                             )
                         th Sản Phẩm 
                         th Danh Mục
@@ -113,29 +132,37 @@ block main
                                 input(
                                     type = "checkbox"
                                     name=""
-                                    class="checkbox"
+                                    class="checkbox-tick"
                                 )
                             td(class="table__title")
                                 img(
                                     src=item.img 
                                     alt=item.title
                                 )
+                                
                                 h3 #{item.title}
                             
                             td #{item.category}
                             td 
                                 if(item.stock > 0)
-                                    span(class="badge badge--active") #{item.stock} In Stock
+                                    span(class="badge badge--active") #{item.stock} Trong Kho
                                 else 
-                                    span(class="badge badge--inactive") Out of Stock
+                                    span(class="badge badge--inactive") Hết hàng
                                     
                             td #{item.price} VND
                             
                             td 
                                 if(item.status == "active")
-                                    span(class="badge badge--active") Hoạt động
+                                    span(
+                                        class="badge badge--active"
+                                        button-status = "active"
+                                    ) Hoạt động
+                                    
                                 else 
-                                    span(class="badge badge--inactive") Dừng hoạt động
+                                    span(
+                                        class="badge badge--inactive"
+                                        button-status = "inactive"
+                                    ) Dừng hoạt động
                             td 
                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                     //- end table
@@ -146,3 +173,5 @@ block main
                 +pagination
     //- end card 
 
+block script 
+    script(src="js/script.js")

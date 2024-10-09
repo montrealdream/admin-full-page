@@ -374,6 +374,8 @@ body {
         font-weight: 700;
         text-transform: capitalize;
         text-align: start;
+        // width: calc(100% / 5);
+        // text-align: left;
     }
 
     &__head {
@@ -408,6 +410,13 @@ body {
         h3 {
             margin: 0px;    // reset h3 html
             font-size: 14px;
+            width: 300px;
+
+            // wrap text
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
 
             &:hover {
                 color: #2275FC;
@@ -539,14 +548,10 @@ body {
         display: flex;
         align-items: center;
         gap: 10px;     
-
-        span {
-            
-        }
         
     }
 
-    &__list-item {
+    &__item {
         padding: 10px 12px;
         border-radius: 12px;
         font-size: 14px;
@@ -555,11 +560,13 @@ body {
         color: #2166D6;
         cursor: pointer;
 
-        &:hover {
+        &:hover, &--active {
             background-color: #2275FC;
             color: white;
-            transition: 0.8s background-color;
+            transition: 1s background-color;
         }
+        
+        
     }
 }
 // end filter
@@ -597,7 +604,7 @@ body {
 // end button
 
 // check box
-.checkbox    {
+.checkbox-tick    {
     appearance: none; // reset default checkbox
     position: relative;
     width: 1em;
@@ -607,6 +614,7 @@ body {
     vertical-align: -2px;
     /* Set here so that Windows' High-Contrast Mode can override */
     color: green;
+    cursor: pointer;
 
     &::before {
         content: "✔";
@@ -854,3 +862,19 @@ body {
       }
 }
 // end radio tick
+
+// sort option
+.sort-option {
+
+    &__title {
+        color: white;
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: capitalize;
+
+        i {
+            margin-right: 5px;
+        }
+    }
+}
+// end sort option
