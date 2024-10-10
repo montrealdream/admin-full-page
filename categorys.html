@@ -127,6 +127,15 @@
                   <input type="text" placeholder="Tìm kiếm ở đây..." value=""/>
                   <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
+                <div class="select">
+                  <select class="select__sort" name="sort" select-sort="select-sort">
+                    <option value="" selected="selected">Sắp xếp </option>
+                    <option value="position-desc">Vị trí giảm dần</option>
+                    <option value="position-asc">Vị trí tăng dần</option>
+                    <option value="title-asc">Tiêu đề từ A - Z</option>
+                    <option value="title-desc">Tiêu đề từ Z - A</option>
+                  </select>
+                </div>
               </div>
               <div class="card__head-right">
                 <div class="button button__outline">
@@ -139,7 +148,7 @@
               <thead class="table__head">
                 <tr> 
                   <td> 
-                    <input class="checkbox" type="checkbox" name="">
+                    <input class="checkbox-tick" type="checkbox" name="" check-box-all>
                   </td>
                   <th>Danh mục</th>
                   <th>Trạng Thái</th>
@@ -149,51 +158,87 @@
               <tbody class="table__body">
                 <tr> 
                   <td> 
-                    <input class="checkbox" type="checkbox" name="">
+                    <input class="checkbox-tick" type="checkbox" name="" check-box-single="001">
                   </td>
                   <td class="table__title"><img src="https://mcdn.coolmate.me/image/September2023/tieu-thuyet-trinh-tham-hay-nhat-2557_155.jpg" alt="Trinh thám">
                     <h3>Trinh thám</h3>
                   </td>
-                  <td> <span class="badge badge--active">Hoạt động</span>
+                  <td> <span class="badge badge--active" button-status-id="001" button-status="active">Hoạt động</span>
                   </td>
                   <td>
-                     <i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    <div class="table__option-icon"><i class="fa-solid fa-ellipsis-vertical"></i>
+                      <div class="table__option-tab hidden">
+                        <ul> 
+                          <li> <a href="#">Chỉnh Sửa</a></li>
+                          <li> <a href="#">Xem Chi Tiết</a></li>
+                          <li> <a href="javascript:;" button-delete-soft="001">Xóa</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
                 </tr>
                 <tr> 
                   <td> 
-                    <input class="checkbox" type="checkbox" name="">
+                    <input class="checkbox-tick" type="checkbox" name="" check-box-single="002">
                   </td>
                   <td class="table__title"><img src="https://bazaarvietnam.vn/wp-content/uploads/2021/07/phim-khoa-hoc-vien-tuong-hay-nhat-moi-thoi-dai-10-e1626966924347.jpg" alt="Khoa học viễn tưởng">
                     <h3>Khoa học viễn tưởng</h3>
                   </td>
-                  <td> <span class="badge badge--active">Hoạt động</span>
+                  <td> <span class="badge badge--active" button-status-id="002" button-status="active">Hoạt động</span>
                   </td>
                   <td>
-                     <i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    <div class="table__option-icon"><i class="fa-solid fa-ellipsis-vertical"></i>
+                      <div class="table__option-tab hidden">
+                        <ul> 
+                          <li> <a href="#">Chỉnh Sửa</a></li>
+                          <li> <a href="#">Xem Chi Tiết</a></li>
+                          <li> <a href="javascript:;" button-delete-soft="002">Xóa</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
                 </tr>
                 <tr> 
                   <td> 
-                    <input class="checkbox" type="checkbox" name="">
+                    <input class="checkbox-tick" type="checkbox" name="" check-box-single="003">
                   </td>
                   <td class="table__title"><img src="https://pos.nvncdn.com/fd5775-40602/ps/20240305_ewEQ8fLJGY.jpeg" alt="Triết học xã hội">
                     <h3>Triết học xã hội</h3>
                   </td>
-                  <td> <span class="badge badge--active">Hoạt động</span>
+                  <td> <span class="badge badge--active" button-status-id="003" button-status="active">Hoạt động</span>
                   </td>
                   <td>
-                     <i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    <div class="table__option-icon"><i class="fa-solid fa-ellipsis-vertical"></i>
+                      <div class="table__option-tab hidden">
+                        <ul> 
+                          <li> <a href="#">Chỉnh Sửa</a></li>
+                          <li> <a href="#">Xem Chi Tiết</a></li>
+                          <li> <a href="javascript:;" button-delete-soft="003">Xóa</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
                 </tr>
                 <tr> 
                   <td> 
-                    <input class="checkbox" type="checkbox" name="">
+                    <input class="checkbox-tick" type="checkbox" name="" check-box-single="005">
                   </td>
                   <td class="table__title"><img src="https://static.taogiaoduc.vn/2018/06/map-3409359_1920.jpg" alt="lịch sử">
                     <h3>lịch sử</h3>
                   </td>
-                  <td> <span class="badge badge--inactive">Dừng hoạt động</span>
+                  <td> <span class="badge badge--inactive" button-status-id="005" button-status="inactive">Dừng hoạt động</span>
                   </td>
                   <td>
-                     <i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    <div class="table__option-icon"><i class="fa-solid fa-ellipsis-vertical"></i>
+                      <div class="table__option-tab hidden">
+                        <ul> 
+                          <li> <a href="#">Chỉnh Sửa</a></li>
+                          <li> <a href="#">Xem Chi Tiết</a></li>
+                          <li> <a href="javascript:;" button-delete-soft="005">Xóa</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -216,6 +261,8 @@
               </ul>
             </div>
           </div>
+          <form class="hidden" action="#" method="POST" form-change-status="form-change-status"></form>
+          <form class="hidden" action="#" method="POST" form-delete-soft="form-delete-soft"></form>
         </div>
       </div>
     </div>

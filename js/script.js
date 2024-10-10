@@ -180,7 +180,7 @@ if(buttonResetAll) {
 
         // xóa hết các ?query
         url.searchParams.delete("status");
-        url.searchParams.delete("key");
+        url.searchParams.delete("keyword");
         url.searchParams.delete("page");
         url.searchParams.delete("sortKey");
         url.searchParams.delete("sortValue");
