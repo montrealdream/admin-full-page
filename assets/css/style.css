@@ -444,7 +444,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 30px;
-  width: 500px;
+  width: 70%;
 }
 .card__footer {
   padding-top: 30px;
@@ -573,7 +573,7 @@ body {
 
 .form__search {
   flex: 1;
-  padding: 10px 22px;
+  padding: 10px;
   border: 1px solid #94A3B8;
   border-radius: 8px;
   overflow: hidden;
@@ -760,6 +760,33 @@ body {
 }
 .sort-option__title i {
   margin-right: 5px;
+}
+
+.select {
+  width: 35%;
+}
+.select__sort {
+  -webkit-appearance: none; /* For Safari & Chrome */
+  -moz-appearance: none; /* For Firefox */
+  appearance: none; /* For other browsers */
+  background-color: transparent;
+  border: 1px solid #94A3B8;
+  border-radius: 8px;
+  color: #94A3B8;
+  font-size: 14px;
+  width: 100%;
+  padding: 13px 8px;
+  cursor: pointer;
+}
+.select__sort option {
+  color: #94A3B8; /* Text color */
+  background-color: #324055; /* Background color */
+}
+.select__sort option:hover {
+  cursor: pointer;
+}
+.select__sort:focus {
+  outline: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -182,6 +182,8 @@ if(buttonResetAll) {
         url.searchParams.delete("status");
         url.searchParams.delete("key");
         url.searchParams.delete("page");
+        url.searchParams.delete("sortKey");
+        url.searchParams.delete("sortValue");
 
         // chuyển hướng url
         window.location.href = url.href;
@@ -209,3 +211,48 @@ if(listButtonDelete.length > 0) {
     });
 }
 // HẾT XÓA MỀM SẢN PHẨM - End Delete Soft
+
+// SẮP XẾP THEO NHIỀU TIÊU CHÍ - Sort 
+const selectSort = document.querySelector("[select-sort]");
+if(selectSort) {
+    // lắng nghe sự kiện thay đổi 
+    selectSort.addEventListener("change", (event) => {
+        // lấy url
+        let url = new URL(window.location.href);
+
+        let option = selectSort.value;
+        // nếu có chọn option
+        if(option) {
+            option = option.split("-");
+            const name = option[0];
+            const type = option[1];
+
+            // ...?sortKey=name&sortValue=type
+            url.searchParams.set("sortKey", name);
+            url.searchParams.set("sortValue", type);
+        }
+        else {
+            url.searchParams.delete("sortKey");
+            url.searchParams.delete("sortValue");
+        }
+
+        // chuyển hướng url
+        window.location.href = url.href;
+    });
+
+    // sau khi chuyển hướng url thì cập nhật lại cái option đang chọn
+    let url = new URL(window.location.href);
+    const sortKey = url.searchParams.get("sortKey");
+    const sortValue = url.searchParams.get("sortValue");
+    
+    if(sortKey !== null && sortValue !== null) {
+        const optionQuery = [sortKey, sortValue].join("-"); // nối chuỗi
+        
+        const findOptionSelected = selectSort.querySelector(`option[value=${optionQuery}]`);
+
+        findOptionSelected.selected = true;
+    }    
+
+
+}
+// HẾT SẮP XẾP THEO NHIỀU TIÊU CHÍ - End Sort 

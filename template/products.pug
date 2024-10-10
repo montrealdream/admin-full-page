@@ -5,6 +5,7 @@ include mixins/box-head
 include mixins/pagination
 include mixins/form
 include mixins/filter
+include mixins/select
 
 //- Title
 block title 
@@ -114,6 +115,9 @@ block main
                 div(class="card__head-left")
                     //- form search
                     +form-search("")
+                    //- select
+                    +select-sort
+
                 //- right
                 div(class="card__head-right")
                     //- add product
