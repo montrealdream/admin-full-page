@@ -244,7 +244,7 @@ if(selectSort) {
     let url = new URL(window.location.href);
     const sortKey = url.searchParams.get("sortKey");
     const sortValue = url.searchParams.get("sortValue");
-    
+
     if(sortKey !== null && sortValue !== null) {
         const optionQuery = [sortKey, sortValue].join("-"); // nối chuỗi
         
@@ -256,3 +256,34 @@ if(selectSort) {
 
 }
 // HẾT SẮP XẾP THEO NHIỀU TIÊU CHÍ - End Sort 
+
+// CHECK BOX ALL VÀ SINGLE
+const checkBoxAll = document.querySelector("[check-box-all]");
+const checkBoxSingles = document.querySelectorAll("[check-box-single]");
+
+if(checkBoxAll && checkBoxSingles.length > 0) {
+    // nếu tíck vào check box all 
+    checkBoxAll.addEventListener("click", (event) => {
+        
+        // nếu tích vào mà là true thì tích vào toàn bộ check box single
+        const isChecked = checkBoxAll.checked;
+
+        checkBoxSingles.forEach(box => {
+            box.checked = isChecked; 
+        }); 
+
+        // có thể dùng if else nhưng dùng cách này sẽ rút gọn lại
+    }); 
+
+    // tích vào check box single
+    checkBoxSingles.forEach(box => {
+        box.addEventListener("click", (event) => {
+            // nếu số lượng box === số lượng box được tích => tích all
+            const quantityChecKed = document.querySelectorAll("[check-box-single]:checked").length;
+            
+            const isCheckedAll = quantityChecKed === checkBoxSingles.length
+            checkBoxAll.checked = isCheckedAll
+        });
+    });
+}
+// END CHECK BOX ALL VÀ SINGLE
